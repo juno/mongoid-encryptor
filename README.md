@@ -9,7 +9,7 @@ Install
 
 Put this line in your Gemfile:
 
-    gem 'mongoid-encryptor'
+    gem 'mongoid-encryptor', :require => 'mongoid/encryptor'
 
 Then bundle:
 
@@ -18,10 +18,6 @@ Then bundle:
 
 Quick Start
 -----------
-
-Add mongoid-encryptor to your Gemfile.
-
-    gem 'mongoid-encryptor', :require => 'mongoid/encryptor'
 
 Set up SHA encrypted field in models like this:
 
