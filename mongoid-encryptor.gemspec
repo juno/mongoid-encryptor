@@ -15,16 +15,15 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "mongoid-encryptor"
 
   s.add_dependency("mongoid", "~> 2.0.0.rc.7")
-  s.add_dependency("stringex", "~> 1.2.0")
+  s.add_dependency("encrypted_strings", "~> 0.3.3")
   s.add_development_dependency("bson_ext", "~> 1.2.0")
   s.add_development_dependency("database_cleaner", "~> 0.6.0")
-  s.add_development_dependency("encrypted_strings", "~> 0.3.3")
   s.add_development_dependency("rspec", "~> 2.4.0")
   if RUBY_VERSION.include? '1.9'
     s.add_development_dependency("ruby-debug19", "~> 0.11.0")
   end
 
-  s.files         = Dir.glob("lib/**/*") + %w(LICENSE README.md)
+  s.files         = Dir.glob("lib/**/*") + %w(CHANGELOG.md LICENSE README.md)
   s.test_files    = Dir.glob("spec/**/*")
   s.require_paths = ["lib"]
 end
