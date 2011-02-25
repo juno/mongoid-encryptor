@@ -6,4 +6,5 @@ class Credential
   field :password
 
   validates_presence_of :email, :password
+  validates_format_of :email, :with => /^\A[^@]+@[^@]+\z/
 end
