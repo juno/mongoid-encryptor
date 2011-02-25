@@ -19,7 +19,7 @@ module Mongoid #:nodoc:
           mode = options.delete(:mode) || :sha
           cipher_class = EncryptedStrings.const_get("#{mode.to_s.classify}Cipher")
 
-          send(:before_save) do |doc|
+          send(:after_validation) do |doc|
             doc.send(:write_encrypted_attribute, attr_name, cipher_class, options)
             true
           end
@@ -32,6 +32,15 @@ module Mongoid #:nodoc:
     end
 
     module InstanceMethods #:nodoc:
+      # Returns decrypted value for key.
+      #
+      # @param [String] key
+      # @return [Object]
+      def read_attribute_for_validation(key)
+        v = read_attribute(key)
+        v.try(:encrypted?) ? v.decrypt : v
+      end
+
       private
 
       # @param [String] attr_name
@@ -50,6 +59,7 @@ module Mongoid #:nodoc:
       # @param [String] attr_name
       # @param [Class] cipher_class
       # @param [Hash] options
+      # @return [String]
       def read_encrypted_attribute(attr_name, cipher_class, options)
         value = read_attribute(attr_name)
 
