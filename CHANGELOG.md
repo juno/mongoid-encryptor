@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.0.3
+-----
+
+* fixed unexpected encryption after validation.
+
 0.0.2
 -----
 
