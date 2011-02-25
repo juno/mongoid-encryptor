@@ -19,7 +19,7 @@ module Mongoid #:nodoc:
           mode = options.delete(:mode) || :sha
           cipher_class = EncryptedStrings.const_get("#{mode.to_s.classify}Cipher")
 
-          send(:before_validation) do |doc|
+          send(:after_validation) do |doc|
             doc.send(:write_encrypted_attribute, attr_name, cipher_class, options)
             true
           end
