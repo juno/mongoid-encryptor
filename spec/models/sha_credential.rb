@@ -7,5 +7,5 @@ class ShaCredential
 
   validates_presence_of :email, :password
 
-  encrypts :password, :mode => :sha,
+  encrypts :password, :mode => :sha
 end
