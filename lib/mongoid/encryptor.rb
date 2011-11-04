@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+require 'active_support/concern'
 require 'encrypted_strings'
 
 module Mongoid #:nodoc:

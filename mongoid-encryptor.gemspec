@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "mongoid-encryptor"
 
+  s.add_dependency("activesupport", "~> 3.1")
   s.add_dependency("mongoid", "~> 2")
   s.add_dependency("encrypted_strings", "~> 0.3.3")
   s.add_development_dependency("database_cleaner", "~> 0.6.7")
