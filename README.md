@@ -4,6 +4,14 @@ mongoid-encryptor
 mongoid-encryptor encrypts and decrypts one or more fields in a Mongoid model.
 
 
+Prerequisites
+-------------
+
+* ruby 1.9.2 or 1.9.3
+* mongoid 2.0 or later
+* activesupport 3.0 or later
+
+
 Install
 -------
 
