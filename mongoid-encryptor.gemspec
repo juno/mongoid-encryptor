@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency("mongoid", "~> 2")
   s.add_dependency("encrypted_strings", "~> 0.3.3")
   s.add_development_dependency("database_cleaner", "~> 0.6.7")
+  s.add_development_dependency("rake", "~> 0.9.2")
   s.add_development_dependency("rspec", "~> 2.7.0")
 
   s.files         = Dir.glob("lib/**/*") + %w(CHANGELOG.md LICENSE README.md)
