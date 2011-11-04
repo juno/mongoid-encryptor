@@ -4,6 +4,7 @@ class ShaCredential
 
   field :email
   field :password
+  field :options
 
   validates_presence_of :email, :password
 

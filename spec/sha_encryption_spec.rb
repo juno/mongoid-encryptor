@@ -2,7 +2,11 @@
 require 'spec_helper'
 
 describe 'SHA encryption' do
-  let(:credential) { ShaCredential.create(:email => 'john.smith@example.com', :password => 'this is a secret') }
+  let(:credential) {
+    ShaCredential.create(:email => 'john.smith@example.com',
+                         :password => 'this is a secret',
+                         :options => ['foo', 'bar', 'baz'])
+  }
 
   context "#to_s" do
     subject { "#{credential.password}" }
@@ -37,7 +41,11 @@ describe 'SHA encryption' do
   end
 
   context "with mass assignment" do
-    let(:credential) { ShaCredential.new(:email => 'john.smith@example.com', :password => 'this is a secret') }
+    let(:credential) {
+      ShaCredential.new(:email => 'john.smith@example.com',
+                        :password => 'this is a secret',
+                        :options => ['foo', 'bar', 'baz'])
+    }
     subject { credential.password }
     it { should eq('this is a secret') }
     it { should_not be_encrypted }
