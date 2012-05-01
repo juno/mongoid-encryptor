@@ -1,7 +1,7 @@
 mongoid-encryptor
 =================
 
-[![Build Status](http://travis-ci.org/juno/mongoid-encryptor.png)]
+[![Build Status](http://travis-ci.org/juno/mongoid-encryptor.png)](http://travis-ci.org/juno/appraiser)
 
 mongoid-encryptor encrypts and decrypts one or more fields in a Mongoid model.
 
