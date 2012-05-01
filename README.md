@@ -1,8 +1,9 @@
 mongoid-encryptor
 =================
 
-mongoid-encryptor encrypts and decrypts one or more fields in a Mongoid model.
+[![Build Status](http://travis-ci.org/juno/mongoid-encryptor.png)]
 
+mongoid-encryptor encrypts and decrypts one or more fields in a Mongoid model.
 
 Prerequisites
 -------------
